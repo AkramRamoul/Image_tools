@@ -25,7 +25,7 @@ const parseSvgFile = (content: string, fileName: string) => {
 
 const parseImageFile = (
   content: string,
-  fileName: string,
+  fileName: string
 ): Promise<{
   content: string;
   metadata: { width: number; height: number; name: string };
@@ -57,7 +57,6 @@ export type FileUploaderResult = {
     height: number;
     name: string;
   } | null;
-  /** Handler for file input change events */
   handleFileUpload: (file: File) => void;
   handleFileUploadEvent: (event: ChangeEvent<HTMLInputElement>) => void;
   /** Resets the upload state */
@@ -91,14 +90,14 @@ export const useFileUploader = (): FileUploaderResult => {
       if (file.type === "image/svg+xml") {
         const { content: svgContent, metadata } = parseSvgFile(
           content,
-          file.name,
+          file.name
         );
         setImageContent(svgContent);
         setImageMetadata(metadata);
       } else {
         const { content: imgContent, metadata } = await parseImageFile(
           content,
-          file.name,
+          file.name
         );
         setImageContent(imgContent);
         setImageMetadata(metadata);

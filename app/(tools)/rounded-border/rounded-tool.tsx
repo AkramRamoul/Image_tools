@@ -9,6 +9,7 @@ import {
   type FileUploaderResult,
 } from "@/hooks/use-file-uploader";
 import { FileDropzone } from "../../components/shared/file-dropzone";
+import NextImage from "next/image";
 
 type Radius = number;
 
@@ -102,11 +103,14 @@ const ImageRenderer = ({
         className="absolute inset-0"
         style={{ backgroundColor: background, borderRadius: 0 }}
       />
-      <img
+      <NextImage
         src={imageContent}
         alt="Preview"
         className="relative rounded-lg"
-        style={{ width: "100%", height: "auto", objectFit: "contain" }}
+        layout="responsive"
+        width={500}
+        height={300}
+        objectFit="contain"
       />
     </div>
   );
