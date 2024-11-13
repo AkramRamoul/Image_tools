@@ -38,16 +38,6 @@ export default function ToolsLayout({
       <main className="flex flex-grow flex-col items-center justify-center">
         {children}
       </main>
-      <footer className="mt-8 text-center text-sm text-gray-500">
-        <a
-          href="https://github.com/AkramRamoul/png_to_svg"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-        >
-          View on GitHub
-        </a>
-      </footer>
     </div>
   );
 }
