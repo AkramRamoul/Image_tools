@@ -162,7 +162,7 @@ function SVGToolCore(props: { fileUploaderProps: FileUploaderResult }) {
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col items-center justify-center gap-6 p-6">
-      {/* Preview Section */}
+      {/* Preview Image */}
       <div className="flex w-full flex-col items-center gap-4 rounded-xl p-6">
         <SVGRenderer svgContent={rawContent} />
         <p className="text-lg font-medium text-white/80">
@@ -170,7 +170,7 @@ function SVGToolCore(props: { fileUploaderProps: FileUploaderResult }) {
         </p>
       </div>
 
-      {/* Size Information */}
+      {/* Size Options */}
       <div className="flex gap-6 text-base">
         <div className="flex flex-col items-center rounded-lg bg-white/5 p-3">
           <span className="text-sm text-white/60">Original</span>
@@ -188,7 +188,7 @@ function SVGToolCore(props: { fileUploaderProps: FileUploaderResult }) {
         </div>
       </div>
 
-      {/* Scale Controls */}
+      {/* Scale Options */}
       <SVGScaleSelector
         title="Scale Factor"
         options={[1, 2, 4, 8, 16, 32, 64]}
@@ -198,7 +198,6 @@ function SVGToolCore(props: { fileUploaderProps: FileUploaderResult }) {
         onCustomValueChange={setCustomScale}
       />
 
-      {/* Action Buttons */}
       <div className="flex gap-3">
         <button
           onClick={cancel}

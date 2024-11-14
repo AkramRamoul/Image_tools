@@ -15,7 +15,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Image tools",
-  description: "A simple tool to convert an svg to png and roud image corners ",
+  description:
+    "A simple tool to convert an svg to png and round image corners ",
   icons: {
     icon: "/favicon.svg",
   },
