@@ -63,9 +63,7 @@ export function FileDropzone({
             droppedFile.name.toLowerCase().endsWith(type.replace("*", ""))
           )
         ) {
-          toast.error(
-            "Invalid file type. Please upload a supported file type."
-          );
+          toast.error("Invalid file type.Upload a supported file type please.");
         }
 
         setCurrentFile(droppedFile);
