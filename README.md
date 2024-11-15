@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Image Tools
+ 
 
-First, run the development server:
+Image Tools is a versatile web application built with Next.js 15 for convenient image manipulation. It provides the following features:
+
+1. SVG to PNG Converter: Convert SVG files to PNG format with scaling options.
+2. Corner Rounding Tool: Adjust the corner radius of images for a customized appearance.
+
+The app also includes a custom drag-and-drop zone for uploading images and reusable components for streamlined functionality.
+
+
+
+## Features
+
+- Features
+- SVG to PNG Converter
+- File Conversion: Upload SVG files and convert them to PNG format.
+- Scaling Options: Choose scaling factors to customize the PNG resolution.
+- Corner Rounding Tool
+- Customizable Radius: Round the corners of uploaded images using an adjustable slider.
+- Live Preview: View the changes in real-time before downloading the updated image.
+- Custom Drop Zone
+- Drag-and-drop interface for intuitive and quick image uploads.
+- Reusable drag-and-drop component for consistent functionality across tools.
+- Additional Features
+- Responsive Design: Built for seamless use across devices.
+- Reusable Components: Modular and maintainable UI components for scalability.
+- Modern Performance: Optimized with Next.js 15 for fast and efficient rendering.
+## Installation
+
+Install my-project with npm
 
 ```bash
+git clone https://github.com/AkramRamoul/Image_tools.git  
+
+cd Image_tools
+
+npm install  
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    
