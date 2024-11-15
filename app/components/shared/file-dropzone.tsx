@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useRef } from "react";
+import { toast } from "sonner";
 
 interface FileDropzoneProps {
   children: React.ReactNode;
@@ -53,25 +54,24 @@ export function FileDropzone({
         const droppedFile = files[0];
 
         if (!droppedFile) {
-          alert("How did you do a drop with no files???");
-          throw new Error("No files dropped");
+          toast.error("No files dropped.");
         }
 
         if (
           !acceptedFileTypes.includes(droppedFile.type) &&
           !acceptedFileTypes.some((type) =>
-            droppedFile.name.toLowerCase().endsWith(type.replace("*", "")),
+            droppedFile.name.toLowerCase().endsWith(type.replace("*", ""))
           )
         ) {
-          alert("Invalid file type. Please upload a supported file type.");
-          throw new Error("Invalid file");
+          toast.error(
+            "Invalid file type. Please upload a supported file type."
+          );
         }
 
-        // Happy path
         setCurrentFile(droppedFile);
       }
     },
-    [acceptedFileTypes, setCurrentFile],
+    [acceptedFileTypes, setCurrentFile]
   );
 
   return (
